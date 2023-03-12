@@ -90,11 +90,8 @@ def get_WORD():
     global WORD
     WORD = random.choice(word_list)
 
-    if not 10 > len(WORD) >= 5:
+    if not 10 > len(WORD) >= 5 or " " in WORD:
         DIFWORD = True
-    elif " " in WORD:
-        DIFWORD = True
-
     while DIFWORD:
         WORD = random.choice(word_list)
         if " " in WORD:
